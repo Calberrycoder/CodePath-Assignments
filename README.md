@@ -13,9 +13,9 @@ Time spent: **6** hours spent in total
     - Tested in version: 4.2
     - Fixed in version: 4.3.1
   - [ ] GIF Walkthrough: ![](https://github.com/Calberrycoder/CodePath-Assignments/blob/master/XSS%20%20ShortCode.gif)
-  - [ ] Steps to recreate: As an administrator the following payload is placed on a page or post (does not work on comments): TEST!!![caption width="1" caption='<a href="' ">]</a><a href="http://onMouseOver='alert(1)'">Click me</a>
-  - [ ] Affected source code: <a href="https://github.com/WordPress/WordPress/commit/f72b21af23da6b6d54208e5c1d65ececdaa109c8">Link</a>
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+  - [ ] Steps to recreate: As an administrator the following payload is placed on a page or post (does not work on comments): "TEST!!![caption width="1" caption='<a href="' ">]</a><a href="http://onMouseOver='alert(1)'">Click me</a>"
+  - [ ] Affected source code:
+    - [Link 1](https://github.com/WordPress/WordPress/commit/f72b21af23da6b6d54208e5c1d65ececdaa109c8)
 2. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
