@@ -7,42 +7,42 @@ Time spent: **6** hours spent in total
 
 ## Pentesting Report
 
-1. Wordpress 4.3 - Authenticated Shortcode Tags Cross-Site Scripting
-  - [ ] Summary: Cross-site scripting (XSS) vulnerability in WordPress before 4.3.1 allows remote attackers to inject arbitrary web script or HTML by leveraging the mishandling of unclosed HTML elements during processing of shortcode tags.
+1. CVE 2015-5622 Wordpress 4.3 - Authenticated Shortcode Tags Cross-Site Scripting
+  - [ ] Summary: 
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.3.1
   - [ ] GIF Walkthrough: ![](https://github.com/Calberrycoder/CodePath-Assignments/blob/master/XSS%20%20ShortCode.gif)
-  - [ ] Steps to recreate: As an administrator the following payload is placed on a page or post (does not work on comments): "TEST!!![caption width="1" caption='<a href="' ">]</a><a href="http://onMouseOver='alert(1)'">Click me</a>"
+  - [ ] Steps to recreate: 1) Use social engineering to gain access to post level permissions. 2) Create a new page/post or modify an existing one. 3) Use HTML editor to insert the following code: ![](https://github.com/Calberrycoder/CodePath-Assignments/blob/master/Shortcode.JPG)
   - [ ] Affected source code:
     - [Link 1](https://github.com/WordPress/WordPress/commit/f72b21af23da6b6d54208e5c1d65ececdaa109c8)
-2. (Required) Vulnerability Name or ID
+2. CVE 2015-5622 Wordpress 4.2.3 Stored Cross-Site Scripting
   - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.3
+  - [ ] GIF Walkthrough: ![](https://github.com/Calberrycoder/CodePath-Assignments/blob/master/Stored%20XSS.gif) 
+  - [ ] Steps to recreate: 1)Utilize social engineering to gain access to admin console. 2)Create or modify new page/post. 3)Using HTML editor insert code like this: ![](https://github.com/Calberrycoder/CodePath-Assignments/blob/master/stored.JPG)
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-3. (Required) Vulnerability Name or ID
+    - [Link 1](https://core.trac.wordpress.org/changeset/33359)
+3. CVE 2017-6817: Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
   - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.7.3
+  - [ ] GIF Walkthrough: ![](https://github.com/Calberrycoder/CodePath-Assignments/blob/master/XSS%20YouTube.gif)
+  - [ ] Steps to recreate: 1)Get access to an account with at least post level permissions utilizing social engineering 2)Create a new page or post/modifying existing. 3)Use HTML editor to embed code similar to this: ![](https://github.com/Calberrycoder/CodePath-Assignments/blob/master/yotube.JPG)
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-4. (Optional) Vulnerability Name or ID
+    - [Link 1](https://github.com/WordPress/WordPress/commit/419c8d97ce8df7d5004ee0b566bc5e095f0a6ca8)
+4. CVE 2016-7168: Authenticated Stored Cross-Site Scripting via Image Filename
   - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+    - Vulnerability types: XSS  
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.10
+  - [ ] GIF Walkthrough: ![](https://github.com/Calberrycoder/CodePath-Assignments/blob/master/XSS%20Word%20Press.gif)
+  - [ ] Steps to recreate: 1)Utlize social engineering to gain access to admin console. 2)Create/Modify post or page. 3)Insert an "image" using HTML editor and code like this: ![](https://github.com/Calberrycoder/CodePath-Assignments/blob/master/image.JPG)
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 1](https://sumofpwn.nl/advisory/2016/persistent_cross_site_scripting_vulnerability_in_wordpress_due_to_unsafe_processing_of_file_names.html)
 5. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
@@ -55,7 +55,7 @@ Time spent: **6** hours spent in total
 
 ## Assets
 
-List any additional assets, such as scripts or files
+List any additional assets, such as scripts or files: None used
 
 ## Resources
 
@@ -66,11 +66,11 @@ GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while doing the work
+The non XSS assignments required significant amounts of setup. 
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2018] [Cody Berry]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
