@@ -12,7 +12,7 @@ Time spent: **6** hours spent in total
     - Vulnerability types: XSS
     - Tested in version: 4.2
     - Fixed in version: 4.3.1
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: ![](https://github.com/Calberrycoder/CodePath-Assignments/blob/master/XSS%20%20ShortCode.gif)
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
